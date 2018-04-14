@@ -21,7 +21,18 @@ namespace MazeFun {
 
             while (true) {
                 _maze = new Maze(55, 5000);
+
+                _maze.Map.ResetMap();
                 _maze.RecursiveBacklog();
+                _maze.Map.PrintMap();
+
+                Console.ReadKey();
+
+                _maze.Map.ResetMap();
+                _maze.Prims();
+                _maze.Map.PrintMap();
+
+                Console.ReadKey();
             }
         }
 

@@ -106,14 +106,22 @@ namespace MazeFun.Resource {
             return false;
         }
 
-        private void IterateCellMapWithExecution(Action<int, int> execution) {
-            for (int i = 0; i < _cells.GetLength(0); i++)
-            for (int j = 0; j < _cells.GetLength(1); j++)
-                execution.Invoke(i, j);
+        /// <summary>
+        ///     Iterates over each cell in the map and executes an Action
+        /// </summary>
+        /// <param name="execution">action (int x, int y) to execute on cells</param>
+        public void IterateCellMapWithExecution(Action<int, int> execution) {
+            for (int x = 0; x < _cells.GetLength(0); x++)
+            for (int y = 0; y < _cells.GetLength(1); y++)
+                execution.Invoke(x, y);
+        }
+
+        public void PrintMap() {
+            IterateCellMapWithExecution((x, y) => _cells[x, y].Print());
         }
 
         public void ResetMap() {
-            IterateCellMapWithExecution((i, j) => _cells[i, j].Type = CellType.Wall);
+            IterateCellMapWithExecution((x, y) => _cells[x, y].Type = CellType.Wall);
         }
     }
 }

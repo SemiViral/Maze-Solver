@@ -18,9 +18,6 @@ namespace MazeFun.Resource.Mazes {
 
         public Maze(short boundX, short boundY) {
             Map = new Map(boundX, boundY);
-
-            Console.BackgroundColor = ConsoleColor.White;
-            Console.Clear();
         }
 
         private IEnumerable<Cell> GetNeighbours(Cell cell, int offset) {
