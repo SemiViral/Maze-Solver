@@ -111,8 +111,8 @@ namespace MazeFun.Resource {
         /// </summary>
         /// <param name="execution">action (int x, int y) to execute on cells</param>
         public void IterateCellMapWithExecution(Action<int, int> execution) {
-            for (int x = 0; x < _cells.GetLength(0); x++)
             for (int y = 0; y < _cells.GetLength(1); y++)
+            for (int x = 0; x < _cells.GetLength(0); x++)
                 execution.Invoke(x, y);
         }
 

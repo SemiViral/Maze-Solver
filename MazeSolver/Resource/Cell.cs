@@ -9,7 +9,11 @@ namespace MazeFun.Resource {
     internal class Cell {
         #region MEMBERS
 
-        private const int DISPLAY_SIZE_MULTIPLIER = 3;
+        /// <summary>
+        ///     This will be the width of each cell in
+        ///     console units.
+        /// </summary>
+        private const int DISPLAY_SIZE_MULTIPLIER = 1;
 
         public int X { get; set; }
 
