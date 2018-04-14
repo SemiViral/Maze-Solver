@@ -9,6 +9,12 @@ using System.Linq;
 
 namespace MazeFun.Resource.Mazes {
     internal partial class Maze {
+        /// <summary>
+        ///     Create a map using Prim's algorithm.
+        /// 
+        ///     As a general rule, I've noticed Prim
+        ///     didn't make very good mazes.
+        /// </summary>
         public void Prims() {
             Map.ResetMap();
 

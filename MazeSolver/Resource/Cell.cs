@@ -13,7 +13,7 @@ namespace MazeFun.Resource {
         ///     This will be the width of each cell in
         ///     console units.
         /// </summary>
-        private const int DISPLAY_SIZE_MULTIPLIER = 1;
+        private const int DISPLAY_SIZE_MULTIPLIER = 3;
 
         public int X { get; set; }
 

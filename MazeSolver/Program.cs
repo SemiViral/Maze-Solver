@@ -20,7 +20,7 @@ namespace MazeFun {
             Console.ReadLine();
 
             while (true) {
-                _maze = new Maze(55, 5000);
+                _maze = new Maze(55, 55);
 
                 _maze.Map.ResetMap();
                 _maze.RecursiveBacklog();
